@@ -4,6 +4,7 @@
     --third-color:#7f6df2;
     --different-color:#bf9663;
     --background-color:#f2f2f2;
+    --another-color:rgb(204, 201, 201);
 }
 *{
     box-sizing: border-box;
@@ -15,22 +16,23 @@ html{
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
 }
 header{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
-    background-color: var(--secondary-color);
+    height: 130px;
+    background: rgb(46,20,217);
+    background: linear-gradient(180deg, rgba(46,20,217,1) 0%, rgba(127,109,242,1) 50%, rgba(242,242,242,1) 100%);
 }
 .header__name{
     margin: 10px;
-    font-size: 2.0rem;
+    font-size: 2.4rem;
     color: var(--background-color);
 }
 .header__icon{
-    display: inline-block;
     width: 30px;
     height: 30px;
     margin: 10px;
@@ -39,3 +41,160 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
 }
+.header__icon:hover{
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border: #bf9663 solid 2px;
+    border-radius: 20px;
+}
+.header__menu{
+    display: none;
+    z-index: 99999999;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 70%;
+    height: 40%;
+    border-bottom-left-radius: 200px;
+    background-color: var(--primary-color);
+}
+.header__menu__item{
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.header__menu__item:nth-child(1){
+    padding-top: 20px;
+}
+.header__menu__item >a{
+    text-decoration: none;
+    color: var(--background-color);
+}
+main{
+    width: 100%;
+    height: auto;
+}
+.main__title{
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.main__text{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.main__icon{
+    width: 120px;
+    height: 120px;
+    margin: 15px auto;
+    background-image: url(./icons/iconFTC.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.about{
+    width: 100%;
+    height: min-content;
+    background: rgb(46,20,217);
+    background: linear-gradient(0deg, rgba(46,20,217,1) 0%, rgba(127,109,242,1) 100%);
+}
+.about__title{
+    margin: 20px 20px;
+    padding-top: 30px;
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--background-color);
+}
+.about__text{
+    margin: 0px 20px;
+    padding-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: justify;
+    color:var(--background-color);
+}
+.about p:nth-child(3){
+    padding-bottom: 50px;
+}
+.projects{
+    width: 100%;
+
+}
+.projects__title{
+    margin: 20px 20px;
+    padding-top: 20px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.card{
+    width: 80%;
+    max-width: 330px;
+    margin: 0  auto 20px;
+    background-color:var(--another-color);
+    border-radius: 20px;
+}
+.card__title{
+    padding: 14px 14px 0    ;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.card__icon{
+    width: 40%;
+    height: 100px;
+    margin: 0 auto;
+    background-image: url("./icons/batata.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card__text{
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 14px;
+}
+footer{
+    width: 100%;
+    min-height:auto;
+    background-color: var(--primary-color) ;
+}
+.footer__text{
+    padding: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--background-color);
+}
+.footer-icon-container{
+    display: flex;
+    justify-content: center;
+}
+.footer__icon{
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    background-image: url("./icons/github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer__icon--linkedin{
+    background-image: url("./icons/linkedin.png");
+    }
+.footer__icon--gmail{
+    background-image: url("./icons/gmail.png");
+}
+.footer__firma{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--background-color);
+}
+
