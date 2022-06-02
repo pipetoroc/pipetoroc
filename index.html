@@ -11,29 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input type="checkbox" id="btn-nav" class="checkbox">
     <header>
+    <div class="header-container">
         <p class="header__name">Felipe Toro Castilla</p>
-        <a class="header__icon" href="#" title="open menu icons"></a>
-        <ul class="header__menu">
-            <li class ="header__menu__item"><a  href="">Home</a></li>
-            <li class ="header__menu__item"><a  href="">About me</a></li>
-            <li class ="header__menu__item"><a  href="">Projects</a></li>
-            <li class ="header__menu__item"><a  href="">Contact</a></li>
-        </ul>
-
+        <label for="btn-nav" class="btn-label">
+            <div class="header-button"></div>
+        </label>
+    </div>
     </header>
+    <nav class="menu">
+        <ul class="menu__var">
+            <li class="menu__var__item"><a href="#home">Home</a></li>
+            <li class="menu__var__item"><a href="#about-me">About me</a></li>
+            <li class="menu__var__item"><a href="#projects">Projects</a></li>
+            <li class="menu__var__item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="main">
-            <h1 class="main__title">Web developer, based in São Paulo-Brazil</h1>
+            <h1 id="home" class="main__title">Web developer, based in São Paulo-Brazil</h1>
             <p class="main__text">I'm developing my creativity and coding beautifull simple things, I love what i do.</p>   
             <div class="main__icon"> </div> 
         </section>
         <section class="about">
-            <h1 class="about__title">Hi, I'm Felipe. Nice to meet you</h1>
+            <h1 class="about__title" id="about-me">Hi, I'm Felipe. Nice to meet you</h1>
             <p class="about__text">I'm a web developer, I always thought I had a strong logical side in me due to my academic background in civil engineering but I realized that I've have been someone who has both, a creative and a logical side. When I found out web development I saw that I could use my creativity to design and my logical side to code. </p>
             <p class="about__text">Passionate about what I do, I'm a continuous student and interested in new technologies</p>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2 class="projects__title"> Projects developed</h2>
             <article class="card">
                 <h3 class="card__title">Batatabit</h3>
@@ -48,7 +54,7 @@
         </section>
     </main>
     <footer>
-        <p class="footer__text"> Don't hesitate in contact me:</p>
+        <p class="footer__text" id="contact"> Don't hesitate in contact me:</p>
         <div class="footer-icon-container">
             <div class="footer__icon github"></div>
             <div class="footer__icon footer__icon--linkedin"></div>
