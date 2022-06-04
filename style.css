@@ -21,21 +21,30 @@ body{
 .checkbox{
     display: none;
 }
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-img{
     width: 100%;
-    height: 130px;
+    height: 200px;
+    background: rgb(242,242,242);
+    background: radial-gradient(circle, rgba(242,242,242,1) 50%, rgba(46,20,217,1) 50%);
+    background-image: url("https://img.freepik.com/vector-gratis/pequenos-empresarios-dispositivos-digitales-gran-globo-navegando-internet-adiccion-internet-sustitucion-vida-real-concepto-trastorno-vida-linea-ilustracion-aislada-violeta-vibrante-brillante_335657-1030.jpg?w=900&t=st=1654356988~exp=1654357588~hmac=620bdea446df21b4253b8d79ca10b3081cb3053401bf4fecbcf9f99afe2df2c8");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header{
+    position: sticky;
+    width: 100%;
+    height: 50px;
     top: 0; 
     z-index: 10;
-    background: linear-gradient(180deg, rgba(46,20,217,1) 0%, rgba(127,109,242,1) 50%, rgba(242,242,242,1) 100%);
+    background-color: #5941f2;
 }
 .header-container{
     display: flex;
+    justify-content: space-between;
     width: 90%;
     align-items: center;
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 .header__name{
     margin: 10px;
@@ -44,8 +53,6 @@ header{
 }
 .btn-label{
     width: 2rem;
-    height: 1.4rem;
-    position: fixed;
     right: 20px;
     top: 65px;
     z-index: 9999;
@@ -54,8 +61,9 @@ header{
     width: 2rem;
     height: 0.2rem;
     background: var(--different-color);
-    position: absolute;
-    right: 10px;
+    position: sticky;
+    right: 20px;
+    top: 30px;
     transition: all 0.2s;
 }
 .header-button::before,
@@ -104,7 +112,7 @@ header{
 }
 .checkbox:checked ~ .menu{
     background: var(--secondary-color);
-    top: 0rem;
+    top: 30px;
 }
 .checkbox:checked + header .header-container label .header-button{
     background: none;
