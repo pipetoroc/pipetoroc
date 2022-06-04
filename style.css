@@ -183,8 +183,12 @@ main{
     background-color:var(--another-color);
     border-radius: 20px;
 }
+.card__link{
+        color: var(--different-color);
+        text-decoration: none;
+}
 .card__title{
-    padding: 14px 14px 0    ;
+    padding: 14px;
     font-size: 1.8rem;
     text-align: center;
 }
@@ -196,6 +200,12 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+.card__icon--google{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2875/2875404.png");
+}
+.car__icon--calculator{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/781/781760.png");
 }
 .card__text{
     font-size: 1.4rem;
