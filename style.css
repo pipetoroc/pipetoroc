@@ -258,4 +258,9 @@ footer{
     font-size: 1.4rem;
     color: var(--background-color);
 }
+.text-mail{
+    position: relative;
+    bottom: 50px;
+    color: var(--background-color);
+}
 
