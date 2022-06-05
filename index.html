@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./tablet.css" media="(min-width: 768px)">
 </head>
 <body>
     <input type="checkbox" id="btn-nav" class="checkbox">
@@ -20,7 +21,7 @@
         </label>
     </div>
     </header>
-    <div class="header-img"></div>
+    <div class="header-img" id="home"></div>
     <nav class="menu">
         <ul class="menu__var">
             <li class="menu__var__item"><a href="#home">Home</a></li>
@@ -29,41 +30,42 @@
             <li class="menu__var__item"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="main" id="home">
+    <main >
+        <section class="main" >
             <h1  class="main__title">Web developer, based in São Paulo-Brazil</h1>
             <p class="main__text">I'm developing my creativity and coding beautifull simple things, I love what i do.</p>   
-            <div class="main__icon"> </div> 
+            <div class="main__icon" id="about-me"> </div> 
         </section>
-        <section class="about">
-            <h1 class="about__title" id="about-me">Hi, I'm Felipe. Nice to meet you</h1>
+        <section class="about" >
+            <h1 class="about__title" >Hi, I'm Felipe. Nice to meet you</h1>
             <p class="about__text">I'm a web developer, I always thought I had a strong logical side in me due to my academic background in civil engineering but I realized that I've have been someone who has both, a creative and a logical side. When I found out web development I saw that I could use my creativity to design and my logical side to code. </p>
-            <p class="about__text">Passionate about what I do, I'm a continuous student and interested in new technologies</p>
+            <p class="about__text" id="projects">Passionate about what I do, I'm a continuous student and interested in new technologies</p>
         </section>
-        <section class="projects" id="projects">
+        <section class="projects" >
             <h2 class="projects__title"> Projects developed</h2>
-            <article class="card">
-                <a class="card__link" href="./mobileFirst/index.html">
-                    <h3 class="card__title">Batatabit</h3>
-                    <div class="card__icon"></div>    
-                </a>
-                <p class="card__text">Proyecto de layaout de pagina web estática, utilizando buenas prácticas y bonile first</p>
-            </article>
-            <article class="card">
-                <a class="card__link" href="./copiaGoogle/index.html">
-                    <h3 class="card__title">Copia de google</h3>
-                    <div class="card__icon card__icon--google"></div>    
-                </a>
-                <p class="card__text">Just for practice I made a google clone</p>
-            </article>
-            <article class="card">
-                <a class="card__link" href="./calculators/index.html">
-                    <h3 class="card__title">Talleres</h3>
-                    <div class="card__icon car__icon--calculator"></div>    
-                </a>
-                <p class="card__text">A few calculators using javaScript</p>
-            </article>
-
+            <div class="container-card">
+                <article class="card">
+                    <a class="card__link" href="./mobileFirst/index.html">
+                        <h3 class="card__title">Batatabit</h3>
+                        <div class="card__icon"></div>    
+                    </a>
+                    <p class="card__text">Proyecto de layaout de pagina web estática, utilizando buenas prácticas y bonile first</p>
+                </article>
+                <article class="card">
+                    <a class="card__link" href="./copiaGoogle/index.html">
+                        <h3 class="card__title">Copia de google</h3>
+                        <div class="card__icon card__icon--google"></div>    
+                    </a>
+                    <p class="card__text">Just for practice I made a google clone</p>
+                </article>
+                <article class="card">
+                    <a class="card__link" href="./calculators/index.html">
+                        <h3 class="card__title">Talleres</h3>
+                        <div class="card__icon car__icon--calculator"></div>    
+                    </a>
+                    <p class="card__text">A few calculators using javaScript</p>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
@@ -75,7 +77,6 @@
             </a>
         </div>
         <p class="footer__firma">Design and coding by Felipe Toro Castilla</p>
-
     </footer>
 
     

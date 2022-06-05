@@ -1,0 +1,40 @@
+.container-card{
+    flex-direction: row;
+}
+.header-button{
+    display: none;
+}
+header{
+    z-index: 0;
+}
+.checkbox{
+    display: none;
+}
+.menu{
+    width: auto;
+    height: auto;
+    position:fixed;
+    top: 0px;
+    background: none;
+}
+.menu__var{
+    display: flex;
+    margin: 10px;
+}
+.menu__var__item{
+    padding-left: 15px;
+}
+.checkbox:checked ~ .menu{
+    background: none;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+.footer__icon:hover{
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 200);
+    transform: translateY(-5%); 
+}
+.footer-icon-container{
+    justify-content:space-evenly;
+}
