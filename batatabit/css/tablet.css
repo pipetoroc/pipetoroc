@@ -1,0 +1,30 @@
+.main-tables-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 930px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "table1 table2"
+    "update1 update2";
+}
+.product-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    margin: 0 auto;
+}
+.plans-container--slider{
+    justify-content: center;
+}
+.main-tables__date{
+    grid-area: update1;
+}
+.main-tables-container__table{
+    grid-area: table1;
+}
+.main-tables-container__table--coin{
+    grid-area: table2;
+}
+.main-tables__date--blue{
+    grid-area: update2;
+}
