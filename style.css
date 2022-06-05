@@ -104,10 +104,11 @@ header{
 .menu__var__item a{
     text-decoration: none;
     color: var(--background-color);
+
 }
 .menu__var__item a:hover{
     font-weight: bold;
-    color: var(--different-color);
+    text-decoration: underline var(--different-color);
 }
 .checkbox:checked ~ .menu{
     background: var(--secondary-color);
@@ -175,7 +176,7 @@ main{
 }
 .projects{
     width: 100%;
-
+    margin-bottom: 60px;
 }
 .projects__title{
     margin: 20px 20px;
@@ -185,13 +186,12 @@ main{
 }
 .container-card{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 .card{
     width: 80%;
     max-width: 330px;
-    margin: 0  auto 20px;
+    margin: 0  auto 30px;
     background-color:var(--another-color);
     border-radius: 20px;
 }
@@ -262,3 +262,9 @@ footer{
     font-size: 1.4rem;
     color: var(--background-color);
 }
+.text-mail{
+    position: relative;
+    bottom: 50px;
+    color: var(--background-color);
+}
+
