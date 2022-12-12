@@ -1,0 +1,111 @@
+:root{
+  --primary-color: #80deea;
+  --p-light: #b4ffff;
+  --p-dark: #4bacb8;
+  --secondary-color: #d81b60;
+  --s-light: #ff5c8d;
+  --s-dark: #a00037;
+  --background: #f4f4f4;
+  --text-p: #000000;
+  --text-l: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: var(--background);
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+figure{
+  width: 500px;
+  height: 500px;
+}
+.logo{
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/assets/pipetorocTransparency.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1) both;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+h2{
+  display: block;
+  width: 25ch;
+  margin-bottom: 100px;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  font-size: 4rem;
+  animation: typing 2s steps(28), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {width: 0;}
+}
+@keyframes blink {
+  50% {border-color: transparent;}
+}
+span{
+  color:var(--secondary-color);
+}
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--p-dark);
+}
+.list{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 14px;
+  list-style: none;
+}
+.list-item{
+  margin: 0 50px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-p);
+}
+a{
+  text-decoration: none;
+}
+a .list-item:hover{
+  text-decoration: underline;
+  color: var(--s-dark);
+}
+.primary-button{
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 12px 14px;
+  background-color: var(--background);
+  color: var(--s-dark);
+  border: 1px solid var(--s-dark);
+  cursor: pointer;
+}
+.primary-button:hover{
+  background-color: var(--secondary-color);
+  color: var(--text-l);
+}
