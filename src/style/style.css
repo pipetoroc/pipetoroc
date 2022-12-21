@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary-color: #80deea;
   --p-light: #b4ffff;
   --p-dark: #4bacb8;
@@ -9,19 +9,19 @@
   --text-p: #000000;
   --text-l: #ffffff;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 62.5%;
 }
-body{
+body {
   background-color: var(--background);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-header{
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,11 +29,11 @@ header{
   width: 100%;
   height: 100vh;
 }
-figure{
+figure {
   width: 500px;
   height: 500px;
 }
-.logo{
+.logo {
   width: 100%;
   height: 100%;
   background-image: url("/src/assets/pipetorocTransparency.svg");
@@ -41,7 +41,7 @@ figure{
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1) both;
+  animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 /* .logo:hover{
   animation: scale 0.9s ease-in-out infinite alternate-reverse both;
@@ -59,11 +59,11 @@ figure{
   0% {
     transform: scale(0.3);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
-h2{
+h2 {
   display: block;
   width: 25ch;
   margin-bottom: 100px;
@@ -71,19 +71,23 @@ h2{
   white-space: nowrap;
   border-right: 4px solid;
   font-size: 4rem;
-  animation: typing 2s steps(28), blink .5s infinite step-end alternate;
+  animation: typing 2s steps(28), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 @keyframes typing {
-  from {width: 0;}
+  from {
+    width: 0;
+  }
 }
 @keyframes blink {
-  50% {border-color: transparent;}
+  50% {
+    border-color: transparent;
+  }
 }
-span{
-  color:var(--secondary-color);
+span {
+  color: var(--secondary-color);
 }
-.primary-button{
+.primary-button {
   font-size: 2.4rem;
   font-weight: 700;
   padding: 12px 14px;
@@ -93,7 +97,7 @@ span{
   cursor: pointer;
   position: relative;
 }
-.primary-button::before{
+.primary-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -102,25 +106,33 @@ span{
   width: 110%;
   height: 110%;
   background: linear-gradient(
-    45deg, 
-    var(--p-dark),var(--s-dark),var(--p-dark),var(--s-dark), var(--p-dark),var(--s-dark),var(--p-dark),var(--s-dark));
-    background-size: 1000%;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
+    45deg,
+    var(--p-dark),
+    var(--s-dark),
+    var(--p-dark),
+    var(--s-dark),
+    var(--p-dark),
+    var(--s-dark),
+    var(--p-dark),
+    var(--s-dark)
+  );
+  background-size: 1000%;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
 }
 @keyframes glowing {
-  0%{
+  0% {
     background-position: 0 0;
   }
-  50%{
+  50% {
     background-position: 400% 0;
   }
-  100%{
+  100% {
     background-position: 0 0;
   }
 }
 
-.primary-button:hover{
+.primary-button:hover {
   background-color: var(--secondary-color);
   color: var(--text-l);
 }
@@ -128,10 +140,10 @@ span{
 /* Home */
 
 /* Nav-Bar */
-main{
+main {
   position: static;
 }
-.nav-bar{
+.nav-bar {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -144,7 +156,7 @@ main{
   z-index: 1;
   background-color: var(--background);
 }
-.nav-bar__logo{
+.nav-bar__logo {
   width: 60px;
   margin-left: 30px;
   background-image: url("../assets/pipeToroC.svg");
@@ -152,45 +164,45 @@ main{
   background-repeat: no-repeat;
   background-size: contain;
 }
-.list{
+.list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
 }
-.list-item{
+.list-item {
   margin: 0 20px;
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-p);
 }
-a{
+a {
   text-decoration: none;
   cursor: pointer;
   border: 3px solid transparent;
 }
-a .list-item:active{
+a .list-item:active {
   color: var(--s-dark);
 }
-a .list-item:hover{
+a .list-item:hover {
   /* text-decoration: underline; */
   border-bottom: 3px solid var(--s-dark);
   line-height: 25px;
   color: var(--s-dark);
 }
-.inactive{
+.inactive {
   display: none;
 }
 
 /* About Me */
 
-.about-me{
+.about-me {
   padding-top: 128px;
   min-height: 100vh;
   width: 100%;
 }
 .active {
-	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @keyframes slide-in-right {
   0% {
@@ -202,49 +214,48 @@ a .list-item:hover{
     opacity: 1;
   }
 }
-.about-me__information{
+.about-me__information {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
-.about-me__figure{
+.about-me__figure {
   display: flex;
   justify-content: center;
   width: 60%;
   height: 80%;
   margin-bottom: 20px;
 }
-.about-me__img{
+.about-me__img {
   border-radius: 14px;
 }
-.information-text{
+.information-text {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.information-text__title{
+.information-text__title {
   font-size: 5rem;
 }
-.information-text__p{
+.information-text__p {
   margin-top: 12px;
   font-size: 2rem;
 }
-.projects{
+.projects {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
   padding: 80px 24px;
 }
-.section-title{
+.section-title {
   width: 100%;
-  font-size:5rem;
+  font-size: 5rem;
   color: var(--text-p);
   margin-bottom: 20px;
 }
-.technology{
+.technology {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -252,19 +263,19 @@ a .list-item:hover{
   width: 70%;
   margin-top: 16px;
 }
-.technology h3{
+.technology h3 {
   width: 100%;
   margin: 20px 0;
   text-align: center;
   font-size: 2.5rem;
-  color:var(--p-dark);
+  color: var(--p-dark);
 }
-.technology i{
+.technology i {
   font-size: 10rem;
   margin-bottom: 10px;
   color: var(--text-p);
 }
-.div-icon{
+.div-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,7 +285,7 @@ a .list-item:hover{
   font-weight: 700;
   color: var(--s-dark);
 }
-.contact-me{
+.contact-me {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -282,56 +293,56 @@ a .list-item:hover{
   height: fit-content;
   padding: 60px 24px;
 }
-.contact-me h3{
+.contact-me h3 {
   margin-bottom: 40px;
   width: 100%;
 }
-.contact-me i{
+.contact-me i {
   font-size: 5rem;
   margin-bottom: 10px;
 }
 
 /* Projects */
-.card{
+.card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 400px;  
+  width: 400px;
   height: fit-content;
   margin: 24px;
   border: 1px solid var(--s-dark);
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 }
-.card:hover{
-  box-shadow: 7px 10px 17px 1px rgba(18,15,15,0.42);
+.card:hover {
+  box-shadow: 7px 10px 17px 1px rgba(18, 15, 15, 0.42);
 }
-.card img{
+.card img {
   min-width: 210px;
   width: 100%;
   height: 300px;
-  background-image: url('https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url("https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card h4{
+.card h4 {
   width: 100%;
   margin: 14px 0;
   text-align: center;
   font-size: 3rem;
-  font-weight:400;
+  font-weight: 400;
 }
-.card i{
+.card i {
   font-size: 5rem;
   margin: 0 14px;
 }
-.card-text__container{
+.card-text__container {
   padding-bottom: 14px;
   background-color: var(--text-l);
   width: 100%;
 }
-.project-hover{
+.project-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -343,21 +354,21 @@ a .list-item:hover{
   opacity: 0;
   transform: scale(1);
 }
-.project-hover:hover{
+.project-hover:hover {
   background-color: var(--p-dark);
   opacity: 0.8;
   transform: scale(1);
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 }
-#react{
-  color: rgb(82,176,206);
+#react {
+  color: rgb(82, 176, 206);
 }
-#javascript{
-  color: rgb(247,224,29);
+#javascript {
+  color: rgb(247, 224, 29);
 }
-#css{
-  color: rgb(0,94,229);
+#css {
+  color: rgb(0, 94, 229);
 }
-#html{
-  color: rgb(228,77,37);
+#html {
+  color: rgb(228, 77, 37);
 }
