@@ -196,15 +196,11 @@ span {
   font-weight: 700;
   color: var(--text-p);
 }
-a {
+.nav-bar__list a{
   text-decoration: none;
-  cursor: pointer;
-  border: 3px solid transparent;
+  /* cursor: pointer; */
 }
-a .list-item:active {
-  color: var(--s-dark);
-}
-a .list__item:hover {
+.list__item:hover {
   border-bottom: 3px solid var(--s-dark);
   line-height: 25px;
   color: var(--s-dark);
@@ -357,25 +353,6 @@ a .list__item:hover {
   background-color: var(--text-l);
   width: 100%;
 } */
-.card-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  height: 396px;
-  opacity: 0;
-  transform: scale(1);
-}
-.card-hover:hover {
-  background-color: var(--p-dark);
-  opacity: 0.8;
-  transform: scale(1);
-  transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
-}
 #react {
   color: rgb(82, 176, 206);
 }

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 0px;
   list-style: none;
   border: none;
   position: static;
@@ -15,4 +16,23 @@
 }
 .nav-bar__menu{
   display: none;
+}
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: -webkit-fill-available;
+  opacity: 0;
+  transform: scale(1);
+}
+.card-hover:hover {
+  background-color: var(--p-dark);
+  opacity: 0.8;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 }
