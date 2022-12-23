@@ -27,13 +27,16 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-width: 320px;
   height: 100vh;
 }
-figure {
-  width: 500px;
+.header__figure {
+  min-width: 300px;
+  max-width: 500px;
+  /* width: 500px; */
   height: 500px;
 }
-.logo {
+.figure__logo {
   width: 100%;
   height: 100%;
   background-image: url("/src/assets/pipetorocTransparency.svg");
@@ -43,18 +46,6 @@ figure {
   cursor: pointer;
   animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
-/* .logo:hover{
-  animation: scale 0.9s ease-in-out infinite alternate-reverse both;
-}
-@keyframes scale {
-  0% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
-
 @keyframes scale-up-center {
   0% {
     transform: scale(0.3);
@@ -63,15 +54,15 @@ figure {
     transform: scale(1);
   }
 }
-h2 {
+.header__h2 {
   display: block;
-  width: 25ch;
+  width: 23ch;
   margin-bottom: 100px;
   font-family: monospace;
   white-space: nowrap;
   border-right: 4px solid;
-  font-size: 4rem;
-  animation: typing 2s steps(28), blink 0.5s infinite step-end alternate;
+  font-size: 2rem;
+  animation: typing 2s steps(23), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 @keyframes typing {
@@ -140,10 +131,8 @@ span {
 /* Home */
 
 /* Nav-Bar */
-main {
-  position: static;
-}
-.nav-bar {
+
+.main__nav-bar {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -164,13 +153,13 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.list {
+.nav-bar__list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
 }
-.list-item {
+.list__item {
   margin: 0 20px;
   font-size: 2rem;
   font-weight: 700;
@@ -184,8 +173,7 @@ a {
 a .list-item:active {
   color: var(--s-dark);
 }
-a .list-item:hover {
-  /* text-decoration: underline; */
+a .list__item:hover {
   border-bottom: 3px solid var(--s-dark);
   line-height: 25px;
   color: var(--s-dark);
@@ -197,9 +185,13 @@ a .list-item:hover {
 /* About Me */
 
 .about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin:0px 16px 16px 16px;
   padding-top: 128px;
-  min-height: 100vh;
-  width: 100%;
+  gap: 24px;
 }
 .active {
   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -214,147 +206,143 @@ a .list-item:hover {
     opacity: 1;
   }
 }
-.about-me__information {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
 .about-me__figure {
-  display: flex;
-  justify-content: center;
-  width: 60%;
-  height: 80%;
+  min-width: 300px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
-.about-me__img {
+.figure__img {
+  width: 100%;
   border-radius: 14px;
 }
-.information-text {
-  display: flex;
-  flex-direction: column;
+.about-me__text {
+  width: 100%;
+  max-width: 700px;
+}
+.text__title {
+  font-size: 3rem;
   text-align: center;
 }
-.information-text__title {
-  font-size: 5rem;
+.text__title::after{
+  content: "Felipe Toro C";
+  color: var(--secondary-color);
+  font-size: 3.5rem;
 }
-.information-text__p {
-  margin-top: 12px;
-  font-size: 2rem;
+.text__p::before{
+  content: "Front-End Developer ";
+  font-size: 3.5rem;
 }
-.projects {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 80px 24px;
+.text__p {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  text-align: justify;
 }
-.section-title {
-  width: 100%;
-  font-size: 5rem;
-  color: var(--text-p);
-  margin-bottom: 20px;
-}
-.technology {
+.text__icons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
-  margin-top: 16px;
+  margin: 20px  auto;
 }
-.technology h3 {
+.title__section {
   width: 100%;
   margin: 20px 0;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--p-dark);
 }
-.technology i {
-  font-size: 10rem;
-  margin-bottom: 10px;
-  color: var(--text-p);
-}
-.div-icon {
+.icons__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-around;
-  padding: 14px;
+  align-items: center;
+  padding: 24px;
   font-size: 2rem;
   font-weight: 700;
   color: var(--s-dark);
 }
-.contact-me {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  height: fit-content;
-  padding: 60px 24px;
-}
-.contact-me h3 {
-  margin-bottom: 40px;
-  width: 100%;
-}
-.contact-me i {
-  font-size: 5rem;
+.icons__container i {
+  font-size: 10rem;
   margin-bottom: 10px;
+  color: var(--text-p);
 }
 
+.projects {
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 320px;
+  margin: 16px; */
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  flex-wrap: wrap;
+}
+.projects__title {
+  width: 100%;
+  font-size: 5rem;
+  color: var(--text-p);
+  margin-bottom: 20px;
+}
+
+
 /* Projects */
-.card {
+.projects__card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 400px;
-  height: fit-content;
+  width: 100%;
+  max-width: 500px;
   margin: 24px;
   border: 1px solid var(--s-dark);
+  border-radius: 14px;
+  overflow: hidden;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 }
-.card:hover {
+.projects__card:hover {
   box-shadow: 7px 10px 17px 1px rgba(18, 15, 15, 0.42);
 }
-.card img {
-  min-width: 210px;
+.card__img {
   width: 100%;
-  height: 300px;
-  background-image: url("https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.card h4 {
+.card__title-container h4 {
   width: 100%;
   margin: 14px 0;
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
 }
-.card i {
+.card-hover{
+  background-color:var(--text-l);
+  width: 100%;
+  padding-bottom: 14px;
+  text-align: center;
+  color: var(--text-p);
+}
+.card-hover i {
   font-size: 5rem;
   margin: 0 14px;
 }
-.card-text__container {
+/* .card__title-container {
   padding-bottom: 14px;
   background-color: var(--text-l);
   width: 100%;
-}
-.project-hover {
+} */
+.card-hover {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 379px;
+  width: 100%;
+  max-width: 500px;
+  height: 396px;
   opacity: 0;
   transform: scale(1);
 }
-.project-hover:hover {
+.card-hover:hover {
   background-color: var(--p-dark);
   opacity: 0.8;
   transform: scale(1);
@@ -371,4 +359,19 @@ a .list-item:hover {
 }
 #html {
   color: rgb(228, 77, 37);
+}
+i{
+  color: var(--text-p);
+}
+/* Contact-me */
+.contact-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.contact-me i {
+  font-size: 5rem;
+  margin-bottom: 10px;
 }

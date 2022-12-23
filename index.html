@@ -32,12 +32,12 @@
   </head>
   <body>
     <header id="home">
-      <figure>
+      <figure class="header__figure">
         <div
-          class="logo"
+          class="figure__logo"
           id="logo"></div>
       </figure>
-      <h2><span>Web Development</span>-Frontend!</h2>
+      <h2 class="header__h2"><span>Web Developer</span>-Frontend!</h2>
       <button
         class="primary-button"
         id="primary-button">
@@ -47,66 +47,63 @@
     <main
       class="inactive"
       id="home">
-      <nav class="nav-bar">
+      <nav class="main__nav-bar">
         <div class="nav-bar__logo"></div>
-        <ul class="list">
+        <ul class="nav-bar__list">
           <a
             id="goHome"
             href="#home"
-            ><li class="list-item">Home</li></a
+            ><li class="list__item">Home</li></a
           >
-          <a href="#about-me"><li class="list-item">About Me</li></a>
-          <a href="#projects"><li class="list-item">Projects</li></a>
-          <a href="#contact-me"><li class="list-item">Contact Me</li></a>
+          <a href="#about-me"><li class="list__item">About Me</li></a>
+          <a href="#projects"><li class="list__item">Projects</li></a>
+          <a href="#contact-me"><li class="list__item">Contact Me</li></a>
         </ul>
       </nav>
       <section
         class="about-me"
         id="about-me">
-        <div class="about-me__information">
-          <figure class="about-me__figure">
-            <img
-              src="./src/assets/perfil.jpg"
-              alt="foto de perfil"
-              loading="lazy"
-              class="about-me__img" />
-          </figure>
-          <div class="information-text">
-            <h1 class="information-text__title">
-              Hello!<br />
-              <span>I Am Felipe Toro C </span>
-            </h1>
-            <p class="information-text__p">
-              Front-End developer from Colombia living in Brazil.
-            </p>
-          </div>
-          <div class="technology">
-            <h3>Technologies</h3>
-            <div class="div-icon">
+        <figure class="about-me__figure">
+          <img
+            class="figure__img"
+            src="./src/assets/perfil.jpg"
+            loading="lazy" />
+        </figure>
+        <div class="about-me__text">
+          <h1 class="text__title">Hello! I Am<br /></h1>
+          <p class="text__p">
+            from Colombia currently based in Brazil, +1 year of experience
+            developing personal projects.<br />
+            I found in the web development the way to bring my ideas to reality
+            and to experience my creative side.
+          </p>
+          <div class="text__icons">
+            <h3 class="title__section">Technologies</h3>
+            <div class="icons__container">
               <i
                 class="fab fa-js"
                 id="javascript"></i>
               javaScript
             </div>
-            <div class="div-icon">
+            <div class="icons__container">
               <i
                 class="fa-brands fa-css3-alt"
                 id="css"></i>
               CSS
             </div>
-            <div class="div-icon">
+            <div class="icons__container">
               <i
                 class="fa-brands fa-html5"
                 id="html"></i>
               HTML
             </div>
-            <div class="div-icon">
+            <div class="icons__container">
               <i
                 class="fa-brands fa-react"
                 id="react"></i>
               React JS
             </div>
-            <div class="div-icon">
+            <div class="icons__container">
               <i class="fa-brands fa-java"></i>
               Java
             </div>
@@ -117,94 +114,139 @@
         class="projects"
         id="projects">
         <h3
-          class="section-title"
+          class="title__section"
           id="projects">
           Projects
         </h3>
-        <article class="card">
-          <img />
-          <div class="card-text__container">
+        <article class="projects__card">
+          <img
+            class="card__img"
+            src="https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" />
+          <div class="card__title-container">
             <h4>To-do List</h4>
           </div>
-          <div class="project-hover">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-globe"></i>
+          <div class="card-hover">
+            <a
+              href="https://github.com/pipetoroc/ToDoList"
+              target="_blank"
+              rel="noopener noreference">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://pipetoroc.github.io/ToDoList/"
+              target="_blank"
+              rel="noopener noreference">
+              >
+              <i class="fa-solid fa-globe"></i>
+            </a>
           </div>
         </article>
-        <article class="card">
-          <img />
-          <div class="card-text__container">
-            <h4>To-do List</h4>
+        <article class="projects__card">
+          <img
+            class="card__img"
+            src="https://images.pexels.com/photos/1446076/pexels-photo-1446076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" />
+
+          <div class="card__title-container">
+            <h4>App Weather</h4>
           </div>
-          <div class="project-hover">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-globe"></i>
-          </div>
-        </article>
-        <article class="card">
-          <img />
-          <div class="card-text__container">
-            <h4>To-do List</h4>
-          </div>
-          <div class="project-hover">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-globe"></i>
-          </div>
-        </article>
-        <article class="card">
-          <img />
-          <div class="card-text__container">
-            <h4>To-do List</h4>
-          </div>
-          <div class="project-hover">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-globe"></i>
+          <div class="card-hover">
+            <a
+              href="https://github.com/pipetoroc/appWeather"
+              target="_blank"
+              rel="noopener noreference">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://pipetoroc.github.io/appWeather/"
+              target="_blank"
+              rel="noopener noreference">
+              >
+              <i class="fa-solid fa-globe"></i>
+            </a>
           </div>
         </article>
-        <article class="card">
-          <img />
-          <div class="card-text__container">
-            <h4>To-do List</h4>
+        <article class="projects__card">
+          <img
+            class="card__img"
+            src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" />
+          <div class="card__title-container">
+            <h4>Tinder Dogs</h4>
           </div>
-          <div class="project-hover">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-globe"></i>
+          <div class="card-hover">
+            <a
+              href="https://github.com/pipetoroc/the-dogs"
+              target="_blank"
+              rel="noopener noreference">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://pipetoroc.github.io/the-dogs/"
+              target="_blank"
+              rel="noopener noreference">
+              >
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </div>
+        </article>
+        <article class="projects__card">
+          <img
+            class="card__img"
+            src="https://drive.google.com/uc?id=1vf4hctmTTtEz5M8AIualxLc--5ODP96n"
+            loading="lazy" />
+          <div class="card__title-container">
+            <h4>Batata Bit</h4>
+          </div>
+          <div class="card-hover">
+            <a
+              href="https://github.com/pipetoroc/mobileFirst"
+              target="_blank"
+              rel="noopener noreference">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://pipetoroc.github.io/mobileFirst/"
+              target="_blank"
+              rel="noopener noreference">
+              >
+              <i class="fa-solid fa-globe"></i>
+            </a>
           </div>
         </article>
       </section>
       <section
         class="contact-me"
         id="contact-me">
-        <h3 class="section-title">Contact Me</h3>
-        <div class="technology">
+        <h3 class="title__section">Contact Me</h3>
+        <div class="icons__container">
           <a
             href="https://github.com/pipetoroc?tab=repositories"
             target="_blank"
             rel="noopener noreference"
             class="div-icon">
-            <i class="fa-brands fa-github"></i>
-            gitHub
           </a>
-          <div class="div-icon">
-            <a
-              href="mailto:ftorocastilla@gmail.com"
-              target="_blank"
-              rel="noopener noreference"
-              class="div-icon">
-              <i class="fa-regular fa-envelope"></i>
-              E-mail
-            </a>
-          </div>
-          <div class="div-icon">
-            <a
-              href="https://www.linkedin.com/in/felipe-toro-castilla/"
-              target="_blank"
-              rel="noopener noreference"
-              class="div-icon">
-              <i class="fa-brands fa-linkedin"></i>
-              Linked-in
-            </a>
-          </div>
+          <i class="fa-brands fa-github"></i>
+          gitHub
+        </div>
+        <div class="icons__container">
+          <a
+            href="mailto:ftorocastilla@gmail.com"
+            target="_blank"
+            rel="noopener noreference">
+          </a>
+          <i class="fa-regular fa-envelope"></i>
+          E-mail
+        </div>
+        <div class="icons__container">
+          <a
+            href="https://www.linkedin.com/in/felipe-toro-castilla/"
+            target="_blank"
+            rel="noopener noreference">
+          </a>
+          <i class="fa-brands fa-linkedin"></i>
+          Linked-in
         </div>
       </section>
     </main>
