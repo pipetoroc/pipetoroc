@@ -1,0 +1,18 @@
+.header__h2 {
+  font-size: 4rem;
+}
+.nav-bar__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  border: none;
+  position: static;
+  top: 0;
+  right: 0;
+  background-color: var(--background);
+
+}
+.nav-bar__menu{
+  display: none;
+}
