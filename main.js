@@ -36,8 +36,13 @@ function goHome() {
 const menu = document.getElementById("menu");
 
 menu.addEventListener("click", toggle);
-function toggle () {
+function toggle() {
   const listMenu = document.getElementById("list-menu");
-  listMenu.classList.toggle('inactive');
-  listMenu.classList.toggle('active');
+  listMenu.classList.toggle("inactive");
+  listMenu.classList.toggle("active");
+
+  const list = document.getElementsByClassName("menu__item");
+  for (let i = 0; i < list.length; i++) {
+    list[i].classList.toggle("itemOpen" + [i + 1]);
+  }
 }

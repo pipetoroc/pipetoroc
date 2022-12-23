@@ -162,13 +162,13 @@ span {
   background: transparent;
   gap: 0.65rem;
 }
-.nav-bar__menu:hover div:first-child{
+.itemOpen1{
   transform: rotate(45deg);
 }
-.nav-bar__menu:hover div:nth-child(2){
+.itemOpen2{
   opacity: 0;
 }
-.nav-bar__menu:hover div:nth-child(3){
+.itemOpen3{
   transform: rotate(-45deg);
 }
 .menu__item{
@@ -184,7 +184,7 @@ span {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 14px;
+  padding: 14px 56px 14px 14px;
   background-color: var(--background);
   border-radius: 8px;
   border: 1px solid black;
@@ -313,7 +313,6 @@ a .list__item:hover {
   color: var(--text-p);
   margin-bottom: 20px;
 }
-
 
 /* Projects */
 .projects__card {
