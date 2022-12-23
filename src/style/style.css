@@ -189,7 +189,7 @@ a .list__item:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin:0px 16px 16px 16px;
+  margin:0px 16px;
   padding-top: 128px;
   gap: 24px;
 }
@@ -220,8 +220,11 @@ a .list__item:hover {
   max-width: 700px;
 }
 .text__title {
+  padding-bottom: 16px;
   font-size: 3rem;
   text-align: center;
+  border-bottom: 1px solid var(--text-p);
+
 }
 .text__title::after{
   content: "Felipe Toro C";
@@ -233,8 +236,8 @@ a .list__item:hover {
   font-size: 3.5rem;
 }
 .text__p {
-  margin-top: 20px;
-  font-size: 2.5rem;
+  margin: 40px 0;
+  font-size: 2rem;
   text-align: justify;
 }
 .text__icons {
@@ -242,11 +245,10 @@ a .list__item:hover {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px  auto;
+  margin-top: 80px;
 }
 .title__section {
   width: 100%;
-  margin: 20px 0;
   text-align: center;
   font-size: 3.5rem;
   color: var(--p-dark);
@@ -275,7 +277,7 @@ a .list__item:hover {
   margin: 16px; */
   display: flex;
   justify-content: center;
-  margin: 16px;
+  margin: 80px 16px 0 16px;
   flex-wrap: wrap;
 }
 .projects__title {
@@ -294,7 +296,7 @@ a .list__item:hover {
   justify-content: center;
   width: 100%;
   max-width: 500px;
-  margin: 24px;
+  margin: 24px 0px;
   border: 1px solid var(--s-dark);
   border-radius: 14px;
   overflow: hidden;
@@ -369,7 +371,7 @@ i{
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-bottom: 40px;
+  margin: 80px 0;
 }
 .contact-me i {
   font-size: 5rem;
