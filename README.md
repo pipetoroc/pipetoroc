@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Felipe Toro</h1>
 <h3 align="center">I am a web developer, frontend specialist and continuous student of new tools and technologies.</h3>
 
-- 🌱 I’m currently learning **Angular**
+- 🌱 I’m currently learning **React JS**
 
-- 👨‍💻 All of my projects are available at [https://pipetoroc.github.io/FelipeToro](https://pipetoroc.github.io/FelipeToro)
+- 👨‍💻 The best of my projects are available at [https://pipetoroc.github.io/FelipeToro](https://pipetoroc.github.io/FelipeToro)
 
 - 📫 How to reach me **ftorocastilla@gmail.com**
 
