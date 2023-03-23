@@ -38,7 +38,7 @@ header {
 .figure__logo {
   width: 100%;
   height: 100%;
-  background-image: url("https://drive.google.com/uc?id=1-aJYyoXcTNr6Zp2EPSqKZwUPqeTmEr8A");
+  background-image: url("../../public/icon/pipetorocTransparency.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -148,7 +148,7 @@ span {
 .nav-bar__logo {
   width: 60px;
   height: 60px;
-  background-image: url("../assets/pipeToroC.svg");
+  background-image: url("../../public/icon/pipetorocTransparency.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -185,11 +185,15 @@ span {
   top: 0;
   right: 0;
   padding: 14px 56px 14px 14px;
-  background-color: var(--background);
+  background: var(--background);
   border-radius: 8px;
   border: 1px solid black;
 }
-
+.main__nav-bar{
+  transition: background .6s ease;
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(0, 0%, 100%, 0.8);
+}
 .list__item {
   margin: 0 20px;
   font-size: 2rem;
@@ -329,6 +333,9 @@ span {
 }
 .card__img {
   width: 100%;
+}
+.card__img--vtex{
+  padding: 10px;
 }
 .card__title-container h4 {
   width: 100%;

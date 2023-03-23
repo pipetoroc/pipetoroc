@@ -29,8 +29,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Satisfy&display=swap"
       rel="stylesheet" />
-      <link rel="stylesheet" href="./src/style/desktop.css" media="(min-width: 730px">
+    <link
+      rel="stylesheet"
+      href="./src/style/desktop.css"
+      media="(min-width: 730px)" />
+      <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon_io/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon_io/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon_io/favicon-16x16.png">
   </head>
+
   <body>
     <header id="home">
       <figure class="header__figure">
@@ -49,14 +56,17 @@
       class="inactive"
       id="home">
       <nav class="main__nav-bar">
-
         <div class="nav-bar__logo"></div>
-        <button class="nav-bar__menu" id="menu">
+        <button
+          class="nav-bar__menu"
+          id="menu">
           <div class="menu__item"></div>
           <div class="menu__item"></div>
           <div class="menu__item"></div>
         </button>
-        <ul class="nav-bar__list inactive" id="list-menu">
+        <ul
+          class="nav-bar__list inactive"
+          id="list-menu">
           <a
             id="goHome"
             href="#home"
@@ -73,16 +83,16 @@
         <figure class="about-me__figure">
           <img
             class="figure__img"
-            src="./src/assets/perfil.jpg"
+            src="./public/images/perfil.jpg"
             loading="lazy" />
         </figure>
         <div class="about-me__text">
           <h1 class="text__title">Hello! I Am<br /></h1>
           <p class="text__p">
-            from Colombia currently based in Brazil, +1 year of experience
-            developing personal projects.<br />
-            I found in the web development the way to bring my ideas to reality
-            and to experience my creative side.
+            from Colombia currently based in Brazil, +1 year of experience developing
+            personal projects.<br />
+            I found in the web development the way to bring my ideas to reality and to
+            experience my creative side.
           </p>
           <div class="text__icons">
             <h3 class="title__section">Technologies</h3>
@@ -176,11 +186,11 @@
         </article>
         <article class="projects__card">
           <img
-            class="card__img"
-            src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="card__img card__img--vtex"
+            src="./public/images/logo.svg"
             loading="lazy" />
           <div class="card__title-container">
-            <h4>Tinder Dogs</h4>
+            <h4>VText-Challenge</h4>
           </div>
           <div class="card-hover">
             <a
@@ -200,7 +210,7 @@
         </article>
         <article class="projects__card">
           <img
-            class="card__img"
+            class="card__img "
             src="https://drive.google.com/uc?id=1vf4hctmTTtEz5M8AIualxLc--5ODP96n"
             loading="lazy" />
           <div class="card__title-container">
@@ -261,6 +271,6 @@
     <script
       src="https://kit.fontawesome.com/38f91498bb.js"
       crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
