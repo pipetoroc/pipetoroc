@@ -11,7 +11,7 @@
   position: static;
   top: 0;
   right: 0;
-  background-color: var(--background);
+  background: none;
 
 }
 .nav-bar__menu{
