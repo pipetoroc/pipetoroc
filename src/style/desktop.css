@@ -17,6 +17,9 @@
 .nav-bar__menu{
   display: none;
 }
+.about-me{
+  margin: 0 40px;
+}
 .card-hover {
   position: absolute;
   top: 0;

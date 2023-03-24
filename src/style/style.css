@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --primary-color: #80deea;
   --p-light: #b4ffff;
@@ -9,18 +10,126 @@
   --text-p: #000000;
   --text-l: #ffffff;
 }
+
+/* Las adaptamos al modo oscuro */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+} */
+/* Reseteamos los margin y paddings de todas las etiquetas */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
 }
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
-body {
-  background-color: var(--background);
-  font-family: "Montserrat", sans-serif;
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
 }
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background);
+  /* opcional */
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -138,7 +247,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 40px;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid var(--text-p);
@@ -219,7 +328,7 @@ span {
 .about-me {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin:0px 16px;
   padding-top: 128px;
@@ -240,7 +349,7 @@ span {
 }
 .about-me__figure {
   min-width: 300px;
-  max-width: 500px;
+  max-width: 400px;
   margin-bottom: 20px;
 }
 .figure__img {
@@ -249,7 +358,7 @@ span {
 }
 .about-me__text {
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
 }
 .text__title {
   padding-bottom: 16px;
@@ -268,7 +377,8 @@ span {
   font-size: 3.5rem;
 }
 .text__p {
-  margin: 40px 0;
+  margin: 40px auto;
+  width: 70%;
   font-size: 2rem;
   text-align: justify;
 }
@@ -277,7 +387,8 @@ span {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin: 0 auto;
+  width: 70%;
 }
 .title__section {
   width: 100%;
@@ -322,7 +433,7 @@ span {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   margin: 24px 0px;
   border: 1px solid var(--s-dark);
   border-radius: 14px;
@@ -346,14 +457,16 @@ span {
   font-weight: 400;
 }
 .card-hover{
-  background-color:var(--text-l);
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding-bottom: 14px;
   text-align: center;
+  background-color:var(--text-l);
   color: var(--text-p);
 }
 .card-hover i {
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0 14px;
 }
 /* .card__title-container {
