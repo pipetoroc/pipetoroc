@@ -1,0 +1,30 @@
+{
+  "name": "portfolio_vanilla",
+  "version": "1.0.0",
+  "description": "Portfolio as a web developer Frontend",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipetoroc/Felipe-Toro.git"
+  },
+  "keywords": [
+    "javaScript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Felipe Toro C",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pipetoroc/Felipe-Toro/issues"
+  },
+  "homepage": "https://github.com/pipetoroc/Felipe-Toro#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+    }
+}

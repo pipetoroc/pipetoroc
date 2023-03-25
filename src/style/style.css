@@ -319,6 +319,9 @@ span {
   line-height: 25px;
   color: var(--s-dark);
 }
+.focus{
+  color: var(--secondary-color);
+}
 .inactive {
   display: none;
 }
