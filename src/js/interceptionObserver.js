@@ -7,13 +7,12 @@ const observeElement = (entries, observer) => {
     }
   })
 }
+sections.forEach(section => {
+  observer.observe(section)
+})
 
 const observer = new IntersectionObserver(observeElement, {
   threshold: 0.1
-})
-
-sections.forEach(section => {
-  observer.observe(section)
 })
 
 function intersectionHandler (entry) {
