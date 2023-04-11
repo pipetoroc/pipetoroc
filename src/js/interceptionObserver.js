@@ -1,4 +1,7 @@
 const sections = document.querySelectorAll('section')
+const home = [document.querySelector('.header')]
+
+const sectionsAll = Array.from(sections).concat(home)
 
 const observeElement = (entries, observer) => {
   entries.forEach(entry => {
@@ -7,12 +10,13 @@ const observeElement = (entries, observer) => {
     }
   })
 }
-sections.forEach(section => {
-  observer.observe(section)
-})
 
 const observer = new IntersectionObserver(observeElement, {
-  threshold: 0.1
+  threshold: 0.8
+})
+
+sectionsAll.forEach(section => {
+  observer.observe(section)
 })
 
 function intersectionHandler (entry) {
@@ -27,3 +31,6 @@ function intersectionHandler (entry) {
     shouldBeFocus.classList.add('focus')
   }
 }
+
+console.log(sectionsAll)
+console.log(sectionsAll[3])

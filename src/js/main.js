@@ -1,23 +1,23 @@
 // Enter to web
-const primaryBtn = document.getElementById('primary-button')
-primaryBtn.addEventListener('click', toggleSection)
+// const primaryBtn = document.getElementById('primary-button')
+// primaryBtn.addEventListener('click', toggleSection)
 
-const logoBtn = document.getElementById('logo')
-logoBtn.addEventListener('click', toggleSection)
+// const logoBtn = document.getElementById('logo')
+// logoBtn.addEventListener('click', toggleSection)
 
 // Change beetween sections from menu bar
-function toggleSection () {
-  const main = document.querySelector('main')
-  const header = document.querySelector('header')
+// function toggleSection () {
+//   const main = document.querySelector('main')
+//   const header = document.querySelector('header')
 
-  if (main.className === 'inactive') {
-    main.className = 'active'
-    header.setAttribute('class', 'inactive')
-  }
-  setTimeout(() => {
-    main.removeAttribute('class')
-  }, 1000)
-}
+//   if (main.className === 'inactive') {
+//     main.className = 'active'
+//     header.setAttribute('class', 'inactive')
+//   }
+//   setTimeout(() => {
+//     main.removeAttribute('class')
+//   }, 1000)
+// }
 
 // Return to home from web
 const homeBtn = document.getElementById('goHome')
@@ -46,3 +46,21 @@ function toggle () {
     list[i].classList.toggle('itemOpen' + [i + 1])
   }
 }
+
+// scroll-menu
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.main__nav-bar')
+  const scrollPosition = window.scrollY
+  const navbarPosition = navbar.offsetTop
+
+  console.log(scrollPosition, 'scroll')
+  console.log(navbar.offsetTop, 'position')
+  console.log(navbarPosition)
+
+  if (navbarPosition <= scrollPosition) {
+    navbar.classList.add('fixed-top')
+  } else {
+    navbar.classList.remove('fixed-top')
+  }
+})

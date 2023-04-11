@@ -130,7 +130,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,8 +241,8 @@ span {
 /* Nav-Bar */
 
 .main__nav-bar {
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  bottom: 0px;
   left: 0px;
   display: flex;
   justify-content: space-between;
@@ -333,6 +333,7 @@ span {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   margin:0px 16px;
   padding-top: 128px;
   gap: 24px;
@@ -419,6 +420,7 @@ span {
 .projects {
   display: flex;
   justify-content: center;
+  min-height: 100vh;
   margin: 80px 16px 0 16px;
   flex-wrap: wrap;
   gap: 24px;
@@ -504,4 +506,12 @@ i{
 .contact-me i {
   font-size: 5rem;
   margin-bottom: 10px;
+}
+
+
+
+.fixed-top {
+  position: fixed ;
+  top: 0;
+  bottom: auto;
 }
