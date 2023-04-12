@@ -51,16 +51,17 @@ function toggle () {
 
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.main__nav-bar')
-  const scrollPosition = window.scrollY
-  const navbarPosition = navbar.offsetTop
+  const main = document.querySelector('.main')
+  const navbarHeight = navbar.offsetHeight
+  const mainTop = main.offsetTop
+  const scrollTop = window.scrollY
+  const logo = document.querySelector('.nav-bar__logo')
 
-  console.log(scrollPosition, 'scroll')
-  console.log(navbar.offsetTop, 'position')
-  console.log(navbarPosition)
-
-  if (navbarPosition <= scrollPosition) {
+  if (scrollTop > mainTop - navbarHeight) {
     navbar.classList.add('fixed-top')
+    logo.style.width = '60px'
   } else {
     navbar.classList.remove('fixed-top')
+    logo.style.width = '0px'
   }
 })
