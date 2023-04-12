@@ -422,12 +422,10 @@ span {
   color: var(--text-p);
 }
 
-.projects {
-}
 .projects__ul{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 24px;
+  gap: 80px;
   place-items: center;
   margin: 40px;
 }
