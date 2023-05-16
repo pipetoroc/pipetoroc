@@ -1,25 +1,3 @@
-// Enter to web
-// const primaryBtn = document.getElementById('primary-button')
-// primaryBtn.addEventListener('click', toggleSection)
-
-// const logoBtn = document.getElementById('logo')
-// logoBtn.addEventListener('click', toggleSection)
-
-// Change beetween sections from menu bar
-// function toggleSection () {
-//   const main = document.querySelector('main')
-//   const header = document.querySelector('header')
-
-//   if (main.className === 'inactive') {
-//     main.className = 'active'
-//     header.setAttribute('class', 'inactive')
-//   }
-//   setTimeout(() => {
-//     main.removeAttribute('class')
-//   }, 1000)
-// }
-
-// Return to home from web
 const homeBtn = document.getElementById('goHome')
 homeBtn.addEventListener('click', goHome)
 
@@ -48,7 +26,6 @@ function toggle () {
 }
 
 // scroll-menu
-
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.main__nav-bar')
   const main = document.querySelector('.main')
