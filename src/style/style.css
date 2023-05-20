@@ -424,10 +424,10 @@ span {
 
 .projects__ul{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
   gap: 80px;
   place-items: center;
-  margin: 40px;
+  margin: 30px;
 }
 .projects__title {
   width: 100%;
