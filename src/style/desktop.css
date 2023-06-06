@@ -1,3 +1,6 @@
+.main{
+  margin: 0 36px;
+}
 .header__h2 {
   font-size: 4rem;
 }
@@ -18,7 +21,14 @@
   display: none;
 }
 .about-me{
-  margin: 0 40px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.about-me__figure{
+  margin: 60px 16px;
+}
+.about-me__text{
+  margin: 0 16px;
 }
 .card-hover {
   position: absolute;

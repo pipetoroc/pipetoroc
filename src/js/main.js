@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY
   const logo = document.querySelector('.nav-bar__logo')
 
-  if (scrollTop > mainTop - navbarHeight) {
+  if (scrollTop > mainTop - navbarHeight - 30) {
     navbar.classList.add('fixed-top')
     logo.style.width = '60px'
   } else {

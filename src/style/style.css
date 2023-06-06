@@ -162,6 +162,7 @@ body {
     transform: scale(1);
   }
 }
+
 .header__h2 {
   display: block;
   width: 23ch;
@@ -336,11 +337,11 @@ span {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   margin:0px 16px;
-  padding-top: 128px;
-  gap: 24px;
+  max-width: 1100px;
 }
+
+/* <------- Animation of menu --------> */
 .active {
   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -358,7 +359,7 @@ span {
   align-self: baseline;
   min-width: 300px;
   max-width: 400px;
-  margin-bottom: 20px;
+  margin: 60px 0px;
 }
 .figure__img {
   width: 100%;
@@ -366,7 +367,7 @@ span {
 }
 .about-me__text {
   width: 100%;
-  max-width: 650px;
+  max-width: 400px;
 }
 .text__title {
   padding-bottom: 16px;
@@ -385,23 +386,22 @@ span {
   font-size: 3.5rem;
 }
 .text__p {
-  margin: 40px auto;
-  width: 70%;
+  margin-top: 35px;
   font-size: 2rem;
   text-align: justify;
+  line-height: 1.5;
 }
 .text__icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto;
-  width: 70%;
+  margin: 80px auto 0;
+  max-width: 1100px;
 }
 .title__section {
   width: 100%;
   margin-bottom: 35px;
-  margin-top: 90px;
   text-align: center;
   font-size: 3.5rem;
   color: var(--p-dark);
@@ -411,7 +411,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 24px 24px 0 24px;
   font-size: 2rem;
   font-weight: 700;
   color: var(--s-dark);
@@ -422,12 +422,19 @@ span {
   color: var(--text-p);
 }
 
+
+
+/* Projects */
+.projects{
+  margin: 80px auto 0;
+  max-width: 1100px;
+}
 .projects__ul{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
-  gap: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
   place-items: center;
-  margin: 30px;
+  max-width: 1100px;
 }
 .projects__title {
   width: 100%;
@@ -435,17 +442,14 @@ span {
   color: var(--text-p);
   margin-bottom: 20px;
 }
-
-/* Projects */
 .projects__card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  max-width: 400px;
+  width: 90%;
+  max-width: 350px;
   min-height: fit-content;
-  margin: 24px 0px;
   border: 1px solid var(--s-dark);
   border-radius: 14px;
   overflow: hidden;
