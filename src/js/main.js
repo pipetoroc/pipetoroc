@@ -1,23 +1,19 @@
-const homeBtn = document.getElementById('goHome')
-homeBtn.addEventListener('click', goHome)
-
-function goHome () {
-  const main = document.querySelector('main')
-  const header = document.querySelector('header')
-
-  main.setAttribute('class', 'inactive')
-
-  header.classList.toggle('inactive')
-}
-
 // Active menu button
 const menu = document.getElementById('menu')
+menu.addEventListener('click', toggleActiveMenu)
 
-menu.addEventListener('click', toggle)
-function toggle () {
+const anchors = document.getElementsByClassName('list__item')
+console.log(anchors)
+for (let i = 0; i < anchors.length; i++) {
+  anchors[i].addEventListener('click', toggleActiveMenu)
+}
+
+function toggleActiveMenu () {
   const listMenu = document.getElementById('list-menu')
+  const modal = document.getElementById('modal')
   listMenu.classList.toggle('inactive')
   listMenu.classList.toggle('active')
+  modal.classList.toggle('inactive')
 
   const list = document.getElementsByClassName('menu__item')
   for (let i = 0; i < list.length; i++) {
