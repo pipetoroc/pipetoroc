@@ -3,7 +3,7 @@
 
 - 🌱 I’m currently learning **React JS**
 
-- 👨‍💻 The best of my projects are available at [https://pipetoroc.github.io/FelipeToro](https://pipetoroc.github.io/FelipeToro)
+- 👨‍💻 The best of my projects are available at [https://pipetoroc.github.io/Felipe-Toro/](https://pipetoroc.github.io/Felipe-Toro/)
 
 - 📫 How to reach me **ftorocastilla@gmail.com**
 
