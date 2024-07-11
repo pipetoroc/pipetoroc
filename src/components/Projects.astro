@@ -1,0 +1,32 @@
+---
+const PROJECTS = [
+    {
+        title: "Project 1",
+        description:
+            "Desarrollador web, Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptate obcaecati minima, sed fugit eius dolor voluptas eum id unde culpa, labore quo, iste harum dolorem quos dignissimos suscipit deleniti.12",
+        link: "https://pipetoroc.github.io/miralo-tv/",
+        github: "https://github.com/pipetoroc/miralo-tv",
+        image: "../../public/miralo-tv.webp",
+        tags: ["JavaScript", "HTML", "CSS"],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, link, github, tags, image }) => (
+        <article>
+            <h3 class="text-2l font-semibold text-purple-pipe mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul>
+                {tags.map((tag) => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10 "
+                src={image}
+                alt={`Captura de pantalla de imagen de proyecto ${image}`}
+            />
+        </article>
+    ))
+}

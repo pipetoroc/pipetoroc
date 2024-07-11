@@ -7,16 +7,19 @@ import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
 import Mail from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
+import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
+import ProjectsIcon from "../components/icons/ProjectIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
 	title="Portfolio de Felipe Toro - Desarrollador y Programador Web FullStack, Frontend y Backend"
 	description="Portafolio de Felipe Toro (pipetoroc) desarrollador web Fullstack(backend, frontend) en el podras encontrar su información de contacto y sus principales proyectos"
 >
-	<main>
+	<main class="px-4">
 		<Section class="py-44 pb-20">
 			<h1
-				class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10"
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				¡Hola!, soy Felipe <a
 					href="https://www.linkedin.com/in/felipe-toro-castilla/"
@@ -27,39 +30,51 @@ import Experience from "../components/Experience.astro";
 					<Badge> Disponible para trabajar </Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl opacity-80">
+			<h2 class="text-xl lg:text-2xl text-wrap max-w--[700px] opacity-80">
 				Desarrollador web, Lorem ipsum dolor sit amet consectetur
 				adipisicing elit. Vel voluptate obcaecati minima, sed fugit eius
 				dolor voluptas eum id unde culpa, labore quo, iste harum dolorem
 				quos dignissimos suscipit deleniti.12
 			</h2>
-			<ul class="flex flex-row gap-x-4 mt-8">
+			<ul class="flex gap-4 mt-8 flex-wrap">
 				<li>
 					<SocialMedia
 						href="https://www.linkein.com/in/felipe-toro-castilla/"
 					>
-						<Linkedin class="size-6" />
+						<Linkedin class="size-4 md:size-6" />
 						Linkedin
 					</SocialMedia>
 				</li>
 				<li>
 					<SocialMedia href="https://www.github.com/pipetoroc">
-						<Github class="size-6" />
+						<Github class="size-4 md:size-6" />
 						Github
 					</SocialMedia>
 				</li>
 				<li>
-					<SocialMedia href="https://www.github.com/pipetoroc">
-						<Mail class="size-6" />
+					<SocialMedia href="mailto:ftorocastilla@gmail.com">
+						<Mail class="size-4 md:size-6" />
 						ftorocastilla@gmail.com
 					</SocialMedia>
 				</li>
 			</ul>
 		</Section>
 
-		<Section class="mb-20">
-			<h2 class="text-2xl font-semibold mb-6">Experiencia Laboral</h2>
+		<Section id="experience" class="mb-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<ExperienceIcon class="size-6" />
+				Experiencia Laboral
+			</h2>
 			<Experience />
+		</Section>
+
+		<Section id="projects" class="mb-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<ProjectsIcon class="size-6" />
+				Proyectos
+			</h2>
+			<div class="flex flex-col gap-y-16"></div>
+			<Projects />
 		</Section>
 	</main>
 </Layout>

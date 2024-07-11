@@ -5,23 +5,27 @@ const EXPERIENCE = [
     {
         date: "Agosto 2023",
         title: "Practicante de pre-ventas",
-        description: "Auxilio en la elaboración de propuestas",
+        description:
+            "Desarrollador web, Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptate obcaecati minima, sed fugit eius dolor voluptas eum id unde culpa, labore quo, iste harum dolorem quos dignissimos suscipit deleniti.12",
         link: "",
+        company: "Convergint",
     },
     {
         date: "Agosto 2023",
         title: "Practicante de pre-ventas",
-        description: "Auxilio en la elaboración de propuestas",
+        description:
+            "Desarrollador web, Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptate obcaecati minima, sed fugit eius dolor voluptas eum id unde culpa, labore quo, iste harum dolorem quos dignissimos suscipit deleniti.12",
         link: "https:www.linkedin.com/in/felipe-toro-castilla/",
+        company: "Beecrowd",
     },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative mt-16">
     {
-        EXPERIENCE.map((experience) => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem {...experience} />
+        EXPERIENCE.map((experiencie) => (
+            <li class="">
+                <ExperienceItem {...experiencie} />
             </li>
         ))
     }
