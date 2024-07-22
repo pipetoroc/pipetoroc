@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "@fontsource-variable/karla";
 
 interface Props {
@@ -25,6 +26,8 @@ const { description, title } = Astro.props;
 		<Header />
 		<slot />
 	</body>
+
+	<Footer/>
 </html>
 <style is:global>
 	:root {
