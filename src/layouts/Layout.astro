@@ -43,6 +43,11 @@ const { description, title } = Astro.props;
 		justify-content: center;
 		background: linear-gradient(270deg, #31388c -61.36%, #16183e 99.83%);
 	}
+	nav{
+		transition: background .6s ease;
+		backdrop-filter: saturate(180%) blur(10px);
+		background: hsl(237 48 16/ 80%);
+	}
 	@media (prefers-reduced-motion: reduce) {
 		html {
 			scroll-behavior: auto;

@@ -6,7 +6,7 @@ export default {
 		extend: {
 			colors: {
 				'purple-pipe': '#cb77ff',
-				'background': '#16183e'
+				'secondary-color': '#7DD3FC'
 			}
 		},
 	},
