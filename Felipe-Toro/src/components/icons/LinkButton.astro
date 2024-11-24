@@ -1,17 +1,12 @@
-<svg
-    {...Astro.props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M20.94 13.045a9 9 0 1 0 -8.953 7.955"></path><path d="M3.6 9h16.8"
-    ></path><path d="M3.6 15h9.4"></path><path d="M11.5 3a17 17 0 0 0 0 18"
-    ></path><path d="M12.5 3a16.991 16.991 0 0 1 2.529 10.294"></path><path
-        d="M16 22l5 -5"></path><path d="M21 21.5v-4.5h-4.5"></path></svg
+---
+const { href } = Astro.props;
+---
+
+<a
+    target="_blank"
+    href={href}
+    role="link"
+    class="inline-flex bg-secondary-color text-primary-color items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-secondary-color focus-visible:ring-yellow-500/80 text-md hover:bg-accent-color group max-w-fit rounded-xl hover:text-dark-color dark:hover:bg-accent-color hover:dark:text-dark-color focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
 >
+    <slot />
+</a>
