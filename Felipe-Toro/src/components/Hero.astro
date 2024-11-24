@@ -1,0 +1,49 @@
+---
+import Badge from "./Badge.astro";
+import Github from "./icons/Github.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<h1
+    class="text-black dark:text-primary-color text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+>
+    ¡Hola!, soy Felipe <a
+        href="https://www.linkedin.com/in/felipe-toro-castilla/"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center"
+    >
+        <Badge> Disponible para trabajar </Badge>
+    </a>
+</h1>
+<h2
+    class="text-black dark:text-primary-color [&>strong]:text-accent-color [&strong]:font-semibold text-xl lg:text-2xl text-pretty max-w--[700px] opacity-80"
+>
+    +2 anos de experiência em desenvolvimento web, <strong
+        >transformando habilidades da construção civil em soluções digitais
+        criativas e eficientes</strong
+    >. Colombiano vivendo no Brasil 🇧🇷, apaixonado por criar experiências únicas
+    que conectam pessoas e ideias.
+</h2>
+<ul class="flex gap-4 mt-8 flex-wrap">
+    <li>
+        <SocialMedia href="https://www.linkedin.com/in/felipe-toro-castilla/">
+            <Linkedin class="size-4 md:size-6" />
+            Linkedin
+        </SocialMedia>
+    </li>
+    <li>
+        <SocialMedia href="https://www.github.com/pipetoroc">
+            <Github class="size-4 md:size-6" />
+            Github
+        </SocialMedia>
+    </li>
+    <li>
+        <SocialMedia href="mailto:ftorocastilla@gmail.com">
+            <Mail class="size-4 md:size-6" />
+            ftorocastilla@gmail.com
+        </SocialMedia>
+    </li>
+</ul>

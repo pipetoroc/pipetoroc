@@ -12,6 +12,7 @@ import Experience from "../components/Experience.astro";
 import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
 import ProjectsIcon from "../components/icons/ProjectIcon.astro";
 import Profile from "../components/icons/Profile.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout
@@ -20,48 +21,17 @@ import Profile from "../components/icons/Profile.astro";
 >
 	<main class="px-4">
 		<Section class="py-44 pb-20">
-			<h1
-				class="text-black dark:text-primary-color text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				¡Hola!, soy Felipe <a
-					href="https://www.linkedin.com/in/felipe-toro-castilla/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Badge> Disponible para trabajar </Badge>
-				</a>
-			</h1>
+			<Hero />
+		</Section>
+
+		<Section id="projects" class="mb-20">
 			<h2
-				class="text-black dark:text-primary-color text-xl lg:text-2xl text-wrap max-w--[700px] opacity-80"
+				class="text-black dark:text-primary-color text-2xl font-semibold mb-6 flex gap-x-2 items-center"
 			>
-				Desarrollador web, Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Vel voluptate obcaecati minima, sed fugit eius
-				dolor voluptas eum id unde culpa, labore quo, iste harum dolorem
-				quos dignissimos suscipit deleniti.12
+				Projetos
+				<ProjectsIcon class="size-6" />
 			</h2>
-			<ul class="flex gap-4 mt-8 flex-wrap">
-				<li>
-					<SocialMedia
-						href="https://www.linkein.com/in/felipe-toro-castilla/"
-					>
-						<Linkedin class="size-4 md:size-6" />
-						Linkedin
-					</SocialMedia>
-				</li>
-				<li>
-					<SocialMedia href="https://www.github.com/pipetoroc">
-						<Github class="size-4 md:size-6" />
-						Github
-					</SocialMedia>
-				</li>
-				<li>
-					<SocialMedia href="mailto:ftorocastilla@gmail.com">
-						<Mail class="size-4 md:size-6" />
-						ftorocastilla@gmail.com
-					</SocialMedia>
-				</li>
-			</ul>
+			<Projects />
 		</Section>
 
 		<Section id="experience" class="mb-20">
@@ -69,20 +39,11 @@ import Profile from "../components/icons/Profile.astro";
 				class="text-black dark:text-primary-color text-2xl font-semibold mb-6 flex gap-x-2 items-center"
 			>
 				<ExperienceIcon class="size-6" />
-				Experiencia Laboral
+				Experiência de Trabalho
 			</h2>
 			<Experience />
 		</Section>
 
-		<Section id="projects" class="mb-20">
-			<h2
-				class="text-black dark:text-primary-color text-2xl font-semibold mb-6 flex gap-x-2 items-center"
-			>
-				Proyectos
-				<ProjectsIcon class="size-6" />
-			</h2>
-			<Projects />
-		</Section>
 		<Section id="about-me">
 			<h2
 				class="text-dark-color dark:text-primary-color text-2xl font-semibold mb-6 flex gap-x-2 items-center"
