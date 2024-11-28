@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/karla";
 
 interface Props {
@@ -17,17 +18,16 @@ const { description, title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 
 	<body class="bg-primary-color dark:bg-dark-color">
 		<Header />
 		<slot />
-	</body>
-
-	<Footer />
+	</body><Footer />
 </html>
 <style is:global>
 	:root {

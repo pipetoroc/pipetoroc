@@ -1,21 +1,25 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
 <footer class="mt-12 bg-dark-color">
   <div
     class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
   >
     <span
       class="text-sm text-primary-color sm:text-center dark:text-primary-color"
-      >© 2023 <a href="https://flowbite.com/" class="hover:underline"
-        >Flowbite™</a
-      >. Portfolio inspired by <a
-        href="https://github.com/midudev"
-        target="_blank"
-        rel="noopener noreferrer">Midu's portfolio</a
-      >.
+    >
+      © {currentYear} Portfolio inspirado no portfólio de @midudev, desenvolvido
+      com Astro e Tailwind CSS.
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
     >
-      <a href="#" class="hover:underline">Contact</a>
+      <a
+        id="contacto"
+        href="mailto:ftorocastilla@gmail.com"
+        class="hover:underline">Contato</a
+      >
     </ul>
   </div>
 </footer>
