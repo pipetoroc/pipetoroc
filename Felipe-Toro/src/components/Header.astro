@@ -20,32 +20,35 @@ import ThemeToggle from "./ThemeToggle.astro";
           >pipetoroc</span
         >
       </a>
-      <ThemeToggle />
 
-      <button
-        id="toggle-button"
-        data-collapse-toggle="navbar-default"
-        type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary-color rounded-lg md:hidden hover:bg-secondary-color focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-default"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
+      <div class="ml-auto flex items-center space-x-4 md:pr-4">
+        <ThemeToggle id="theme" />
+
+        <button
+          id="toggle-button"
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary-color rounded-lg md:hidden hover:bg-secondary-color focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"></path>
-        </svg>
-      </button>
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
+      </div>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
@@ -53,28 +56,28 @@ import ThemeToggle from "./ThemeToggle.astro";
           <li>
             <a
               href="/#hero"
-              class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 hover:text-dark-color hover:bg-accent-color hover:md:text-accent-color"
+              class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               aria-current="page">Home</a
             >
           </li>
           <li>
             <a
               href="/#projects"
-              class="block py-2 px-3 rounded hover:text-dark-color hover:bg-accent-color hover:md:text-accent-color md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-secondary-color dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Projetos</a
             >
           </li>
           <li>
             <a
               href="/#experience"
-              class="block py-2 px-3 rounded hover:text-dark-color hover:bg-accent-color hover:md:text-accent-color md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-secondary-color dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Experiência</a
             >
           </li>
           <li>
             <a
               href="/#about-me"
-              class="block py-2 px-3 rounded hover:text-dark-color hover:bg-accent-color hover:md:text-accent-color md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-secondary-color dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Sobre mim</a
             >
           </li>
@@ -82,7 +85,7 @@ import ThemeToggle from "./ThemeToggle.astro";
             <a
               id="contacto"
               href="mailto:miduga@gmail.com"
-              class="block py-2 px-3 rounded hover:text-dark-color hover:bg-accent-color hover:md:text-accent-color md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-secondary-color dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Contato</a
             >
           </li>
