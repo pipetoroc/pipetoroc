@@ -32,8 +32,9 @@ const PROJECTS = [
             "Catálogo de filmes desenvolvido do zero com JavaScript, CSS e HTML. Permite explorar opções com filtros avançados por categorias, filmes em alta e avaliações dos usuários, oferecendo uma experiência dinâmica e intuitiva.",
         link: "https://pipetoroc.github.io/miralo-tv/",
         github: "https://github.com/pipetoroc/miralo-tv",
-        image: "public/projects/miralo-tv.webp",
+        image: "../../public/projects/miralo-tv.webp",
         tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
+        alt: "Captura de tela da aplicação miralo-tv",
     },
     {
         title: "V-Tex",
@@ -41,74 +42,78 @@ const PROJECTS = [
             "Criação de uma landing page com o design exclusivo da V-Tex, utilizando CSS e o framework LESS.",
         link: "https://pipetoroc.github.io/teste-front-end-jr/",
         github: "https://github.com/pipetoroc/teste-front-end-jr",
-        image: "public/projects/VTex.webp",
+        image: "../../public/projects/VTex.webp",
         tags: [TAGS.HTML, TAGS.CSS],
+        alt: "captura de tela da landing page V-Tex",
     },
     {
-        title: "News Hompage",
+        title: "News Homepage",
         description:
             "Homepage de Site de Notícias desenvolvimento de uma homepage para um site de notícias utilizando HTML e CSS.",
         link: "https://pipetoroc.github.io/news-homepage",
         github: "https://github.com/pipetoroc/news-homepage",
-        image: "public/projects/news.webp",
+        image: "../../public/projects/news.webp",
         tags: [TAGS.HTML, TAGS.CSS],
+        alt: "Captura de tela da landing page News Homepage",
     },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
     {
-        PROJECTS.map(({ title, description, link, github, tags, image }) => (
-            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-                <div class="w-full md:w-1/2">
-                    <figure class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                        <img
-                            alt=""
-                            class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                            loading="lazy"
-                            src={image}
-                        />
-                    </figure>
-                </div>
-
-                <div class="w-full md:w-1/2 md:max-w-lg">
-                    <h3 class="text-support-color dark:text-primary-color text-2l font-bold mb-2">
-                        {title}
-                    </h3>
-
-                    <div class="flex flex-wrap mt-2">
-                        <ul class="flex gap-x-4 flex-row">
-                            {tags.map((tag) => (
-                                <li>
-                                    <span
-                                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
-                                    >
-                                        <tag.icon class="size-4" />
-                                        {tag.name}
-                                    </span>
-                                </li>
-                            ))}
-                        </ul>
-                        <p class="mt-2 text-dark-color dark:text-primary-color">
-                            {description}
-                        </p>
-                        <footer class="flex items-end justify-start mt-4 gap-x-4">
-                            {github && (
-                                <LinkButton href={github}>
-                                    <Github class="size-6" />
-                                    Code
-                                </LinkButton>
-                            )}
-                            {link && (
-                                <LinkButton href={link}>
-                                    <Link class="size-4" />
-                                    Preview
-                                </LinkButton>
-                            )}
-                        </footer>
+        PROJECTS.map(
+            ({ alt, image, tags, github, link, description, title }) => (
+                <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                        <figure class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                            <img
+                                alt={alt}
+                                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                                loading="lazy"
+                                src={image}
+                            />
+                        </figure>
                     </div>
-                </div>
-            </article>
-        ))
+
+                    <div class="w-full md:w-1/2 md:max-w-lg">
+                        <h3 class="text-support-color dark:text-primary-color text-2l font-bold mb-2">
+                            {title}
+                        </h3>
+
+                        <div class="flex flex-wrap mt-2">
+                            <ul class="flex gap-x-4 flex-row">
+                                {tags.map((tag) => (
+                                    <li>
+                                        <span
+                                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
+                                        >
+                                            <tag.icon class="size-4" />
+                                            {tag.name}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p class="mt-2 text-dark-color dark:text-primary-color">
+                                {description}
+                            </p>
+                            <footer class="flex items-end justify-start mt-4 gap-x-4">
+                                {github && (
+                                    <LinkButton href={github}>
+                                        <Github class="size-6" />
+                                        Code
+                                    </LinkButton>
+                                )}
+                                {link && (
+                                    <LinkButton href={link}>
+                                        <Link class="size-4" />
+                                        Preview
+                                    </LinkButton>
+                                )}
+                            </footer>
+                        </div>
+                    </div>
+                </article>
+            ),
+        )
     }
 </div>
