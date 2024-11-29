@@ -55,6 +55,7 @@ import ThemeToggle from "./ThemeToggle.astro";
         >
           <li>
             <a
+              aria-label="hero"
               href="/#hero"
               class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               aria-current="page">Home</a
@@ -62,6 +63,7 @@ import ThemeToggle from "./ThemeToggle.astro";
           </li>
           <li>
             <a
+              aria-label="projects"
               href="/#projects"
               class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Projetos</a
@@ -69,6 +71,7 @@ import ThemeToggle from "./ThemeToggle.astro";
           </li>
           <li>
             <a
+              aria-label="experience"
               href="/#experience"
               class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Experiência</a
@@ -76,6 +79,7 @@ import ThemeToggle from "./ThemeToggle.astro";
           </li>
           <li>
             <a
+              aria-label="about-me"
               href="/#about-me"
               class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
               >Sobre mim</a
@@ -83,6 +87,7 @@ import ThemeToggle from "./ThemeToggle.astro";
           </li>
           <li>
             <a
+              aria-label="contact"
               id="contacto"
               href="mailto:miduga@gmail.com"
               class="block py-2 px-3 text-white rounded md:bg-transparent hover:bg-accent-color hover:text-dark-color md:p-0 md:hover:bg-transparent md:hover:text-accent-color"
@@ -95,16 +100,67 @@ import ThemeToggle from "./ThemeToggle.astro";
   </nav>
 </header>
 
-<script is:inline>
-  document.getElementById("toggle-button").addEventListener("click", () => {
-    const menu = document.getElementById("navbar-default");
-    menu.classList.toggle("hidden");
-  });
+<script>
+  const toggleButton = document.getElementById(
+    "toggle-button",
+  ) as HTMLButtonElement;
+
+  if (toggleButton) {
+    toggleButton.addEventListener("click", () => {
+      const menu = document.getElementById(
+        "navbar-default",
+      ) as HTMLElement | null;
+      menu?.classList.toggle("hidden");
+    });
+  }
 
   window.addEventListener("popstate", function () {
     const menu = document.getElementById("navbar-default");
-    if (!menu.classList.contains("hidden")) {
-      menu.classList.add("hidden");
+    if (!menu?.classList.contains("hidden")) {
+      menu?.classList.add("hidden");
     }
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav  a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") === entry.target.id) {
+              console.log(item.getAttribute("aria-label"));
+
+              item.classList.remove("text-white");
+              item.classList.add("text-accent-color");
+            } else {
+              item.classList.remove("text-accent-color");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "-100px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
   });
 </script>
